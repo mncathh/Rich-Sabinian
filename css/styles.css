@@ -277,7 +277,7 @@ ul { list-style:none; }
   display: flex; 
   gap: 20px; 
   width: max-content; 
-  animation: scrollLoop 40s linear infinite; 
+   will-change: transform;
 }
 .carousel-slide { 
   flex: 0 0 300px; 
@@ -299,13 +299,6 @@ ul { list-style:none; }
 .carousel-slide:hover img { 
   transform: scale(1.05); 
   filter: brightness(0.7) saturate(1); 
-}
-@keyframes scrollLoop { 
-  from { transform: translateX(0); } 
-  to { transform: translateX(calc(-50%)); } 
-}
-.carousel-wrapper:hover #carouselTrack { 
-  animation-play-state: paused; 
 }
 
 @media (max-width: 900px) {
