@@ -212,18 +212,62 @@
   
   <!-- Simple carousel fix that runs after page loads -->
   <script>
-    // Ensure carousel has enough items for smooth scrolling
-    document.addEventListener('DOMContentLoaded', function() {
-      const track = document.getElementById('carouselTrack');
-      if (track && track.children.length < 12) {
-        // If not enough items, duplicate what we have
-        const originalItems = Array.from(track.children);
-        originalItems.forEach(item => {
-          const clone = item.cloneNode(true);
-          track.appendChild(clone);
-        });
+  document.addEventListener('DOMContentLoaded', function () {
+    const track = document.getElementById('carouselTrack');
+    if (!track) return;
+
+    // Wait for images to load so we get accurate widths
+    const images = Array.from(track.querySelectorAll('img'));
+    let loaded = 0;
+    const total = images.length;
+
+    function startCarousel() {
+      // Remove CSS animation — we'll drive it with JS
+      track.style.animation = 'none';
+
+      const slides = Array.from(track.children);
+      const half = Math.floor(slides.length / 2);
+
+      // Calculate the exact pixel width of one full set (half the track)
+      let halfWidth = 0;
+      const gap = 20; // must match your CSS gap
+      slides.slice(0, half).forEach(slide => {
+        halfWidth += slide.offsetWidth + gap;
+      });
+
+      let pos = 0;
+      const speed = 0.5; // px per frame — adjust for faster/slower
+      let paused = false;
+
+      track.parentElement.addEventListener('mouseenter', () => paused = true);
+      track.parentElement.addEventListener('mouseleave', () => paused = false);
+
+      function animate() {
+        if (!paused) {
+          pos += speed;
+          if (pos >= halfWidth) pos -= halfWidth; // seamless reset
+          track.style.transform = `translateX(-${pos}px)`;
+        }
+        requestAnimationFrame(animate);
       }
-    });
-  </script>
+
+      animate();
+    }
+
+    if (total === 0) {
+      startCarousel();
+    } else {
+      images.forEach(img => {
+        if (img.complete) {
+          loaded++;
+          if (loaded === total) startCarousel();
+        } else {
+          img.addEventListener('load', () => { loaded++; if (loaded === total) startCarousel(); });
+          img.addEventListener('error', () => { loaded++; if (loaded === total) startCarousel(); });
+        }
+      });
+    }
+  });
+</script>
 </body>
 </html>
