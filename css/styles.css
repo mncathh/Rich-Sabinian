@@ -273,11 +273,11 @@ ul { list-style:none; }
   overflow: hidden; 
   border-radius: 2px; 
 }
-#carouselTrack { 
+.carousel-track { 
   display: flex; 
   gap: 20px; 
-  width: max-content; 
-   will-change: transform;
+  width: max-content;
+  will-change: transform;
 }
 .carousel-slide { 
   flex: 0 0 300px; 
