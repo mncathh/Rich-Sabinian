@@ -1,0 +1,170 @@
+/* =============================================
+   COLLECTIONS DATA
+============================================= */
+const collectionsData = [
+  {
+    cat: 'Signature',
+    name: 'Solihiya',
+    mainImg: 'Solohiya/hero.jpg',
+    desc: 'A tribute to Filipino weaving heritage. Modern silhouettes meet traditional craftsmanship in this signature collection of refined formal wear.',
+    gallery: [
+      'Solohiya/hero.jpg',
+      'Solohiya/1.png',
+      'Solohiya/hero1.jpg',
+      'Solohiya/2.jpg',
+      'Solohiya/3.jpg',
+      'Solohiya/4.jpg',
+      'Solohiya/5.jpg',
+      'Solohiya/6.jpg',
+      'Solohiya/7.jpg',
+    ]
+  },
+  {
+    cat: 'Costumes',
+    name: 'National Costume',
+    mainImg: 'national-costumes/hero.jpg',
+    desc: 'Celebrating Filipino pride through intricate embroidery and cultural motifs.',
+    gallery: [
+      'national-costumes/hero.jpg',
+      'national-costumes/1.jpg',
+      'national-costumes/2.jpg',
+      'national-costumes/3.jpg',
+      'national-costumes/4.jpg',
+      'national-costumes/5.jpg',
+      'national-costumes/6.jpg',
+    ]
+  },
+  {
+    cat: 'Wedding',
+    name: 'Bridal Collection 2026',
+    mainImg: 'bridal-collection-2026/hero.jpg',
+    desc: 'The latest vision of romance. Ethereal gowns with contemporary silhouettes.',
+    gallery: [
+      'bridal-collection-2026/hero.jpg',
+      'bridal-collection-2026/1.jpg',
+      'bridal-collection-2026/2.jpg',
+      'bridal-collection-2026/3.jpg',
+      'bridal-collection-2026/4.jpg',
+      'bridal-collection-2026/5.jpg',
+      'bridal-collection-2026/55.jpg',
+      'bridal-collection-2026/6.jpg',
+      'bridal-collection-2026/9.jpg',
+      'bridal-collection-2026/10.jpg',
+    ]
+  },
+  {
+    cat: 'Wedding',
+    name: 'Bridal Collection 2025',
+    mainImg: 'bridal-collection-2025/hero.jpg',
+    desc: 'Timeless elegance redefined. Soft draping and delicate beadwork.',
+    gallery: [
+      'bridal-collection-2025/hero.jpg',
+      'bridal-collection-2025/1.jpg',
+      'bridal-collection-2025/2.jpg',
+      'bridal-collection-2025/3.jpg',
+      'bridal-collection-2025/4.jpg',
+      'bridal-collection-2025/5.jpg',
+      'bridal-collection-2025/6.jpg',
+      'bridal-collection-2025/9.jpg',
+      'bridal-collection-2025/10.jpg',
+      'bridal-collection-2025/11.jpg',
+    ]
+  },
+  {
+    cat: 'Barong',
+    name: 'Pustura',
+    mainImg: 'PUSTURA/hero.jpg',
+    desc: 'Modern barong reimagined. Clean lines and contemporary silhouettes.',
+    gallery: [
+      'PUSTURA/hero.jpg',
+      'PUSTURA/1.jpg',
+      'PUSTURA/2.jpg',
+      'PUSTURA/3.jpg',
+      'PUSTURA/4.jpg',
+      'PUSTURA/5.jpg',
+      'PUSTURA/6.jpg',
+      'PUSTURA/7.jpg',
+    ]
+  },
+  {
+    cat: 'Dresses',
+    name: 'For Kids',
+    mainImg: 'Kids/hero.jpg',
+    desc: 'Charming childrenswear for special occasions.',
+    gallery: [
+      'Kids/1.jpg',
+      'Kids/2.jpg',
+      'Kids/3.jpg',
+      'Kids/4.jpg',
+      'Kids/5.jpg',
+      'Kids/6.jpg',
+      'Kids/7.jpg',
+      'Kids/8.jpg',
+      'Kids/9.jpg',
+      'Kids/10.jpg',
+      'Kids/11.jpg',
+      'Kids/12.jpg',
+    ]
+  },
+  {
+    cat: 'Wedding',
+    name: 'Bridal Collection 2023',
+    mainImg: 'bridal-collection-2023/hero.jpg',
+    desc: 'Dreamy silhouettes and intricate beadwork.',
+    gallery: [
+      'bridal-collection-2023/hero.jpg',
+      'bridal-collection-2023/1.jpg',
+      'bridal-collection-2023/2.jpg',
+      'bridal-collection-2023/3.jpg',
+      'bridal-collection-2023/4.jpg',
+      'bridal-collection-2023/5.jpg',
+      'bridal-collection-2023/6.jpg',
+      'bridal-collection-2023/7.jpg',
+      'bridal-collection-2023/8.jpg',
+    ]
+  },
+  {
+    cat: 'Wedding',
+    name: 'Bridal Collection 2022',
+    mainImg: 'bridal-collection-2022/hero.jpg',
+    desc: 'Vintage-inspired bridal pieces with a modern twist.',
+    gallery: [
+      'bridal-collection-2022/1.jpg',
+      'bridal-collection-2022/2.jpg',
+      'bridal-collection-2022/3.jpg',
+      'bridal-collection-2022/4.jpg',
+      'bridal-collection-2022/5.jpg',
+      'bridal-collection-2022/6.jpg',
+      'bridal-collection-2022/7.jpg',
+      'bridal-collection-2022/8.jpg',
+      'bridal-collection-2022/9.jpg',
+      'bridal-collection-2022/10.jpg',
+      'bridal-collection-2022/11.jpg',
+      'bridal-collection-2022/12.jpg',
+      'bridal-collection-2022/13.jpg',
+    ]
+  },
+  {
+    cat: 'Wedding',
+    name: 'Entourage',
+    mainImg: 'Entourage/hero.jpg',
+    desc: 'Complete wedding entourage styling.',
+    gallery: [
+      'Entourage/hero.jpg',
+      'Entourage/1.jpg', 'Entourage/2.jpg', 'Entourage/3.jpg', 'Entourage/4.jpg',
+      'Entourage/5.jpg', 'Entourage/6.jpg', 'Entourage/7.jpg', 'Entourage/8.jpg',
+      'Entourage/9.jpg', 'Entourage/10.jpg', 'Entourage/11.jpg', 'Entourage/12.jpg',
+      'Entourage/13.jpg', 'Entourage/14.jpg', 'Entourage/15.jpg', 'Entourage/16.jpg',
+      'Entourage/17.jpg', 'Entourage/18.jpg', 'Entourage/19.jpg', 'Entourage/20.jpg',
+      'Entourage/21.jpg', 'Entourage/22.jpg', 'Entourage/23.jpg', 'Entourage/24.jpg',
+      'Entourage/25.jpg', 'Entourage/26.jpg', 'Entourage/27.jpg', 'Entourage/28.jpg',
+      'Entourage/29.jpg', 'Entourage/30.jpg', 'Entourage/31.jpg', 'Entourage/32.jpg',
+      'Entourage/33.jpg', 'Entourage/34.jpg', 'Entourage/35.jpg', 'Entourage/36.jpg',
+      'Entourage/38.jpg', 'Entourage/39.jpg', 'Entourage/40.jpg', 'Entourage/41.jpg',
+      'Entourage/42.jpg', 'Entourage/43.jpg', 'Entourage/44.jpg', 'Entourage/45.jpg',
+      'Entourage/46.jpg', 'Entourage/47.jpg', 'Entourage/48.jpg', 'Entourage/49.jpg',
+      'Entourage/50.jpg', 'Entourage/51.jpg', 'Entourage/52.jpg', 'Entourage/53.jpg',
+      'Entourage/54.jpg', 'Entourage/55.jpg', 'Entourage/56.jpg', 'Entourage/57.jpg',
+    ]
+  }
+];

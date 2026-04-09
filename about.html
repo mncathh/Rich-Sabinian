@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>About — Rich Sabinian</title>
+
+  <link rel="icon" type="image/png" href="rs logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="logo" onclick="window.location.href='index.html'">
+      <img class="logo-img" src="rs logo.png" alt="Rich Sabinian Logo">
+      <span class="logo-text">Rich <em>Sabinian</em></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="collections.html">Collections</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="contact.html">Get in Touch</a>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mob-drawer" id="mobDrawer">
+    <div class="mob-top">
+      <div class="logo" onclick="window.location.href='index.html'">
+        <img class="logo-img" src="rs logo.png" alt="Logo" style="width:34px;height:34px;">
+        <span class="logo-text" style="font-size:.85rem;">Rich <em>Sabinian</em></span>
+      </div>
+      <button class="mob-close" id="mobClose">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M1 1L15 15M15 1L1 15" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="mob-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="mob-divider"></div>
+      <a href="collections.html">Collections</a>
+      <a href="services.html">Services</a>
+      <div class="mob-divider"></div>
+      <a href="contact.html">Contact</a>
+      <div class="mob-cta-link" onclick="window.location.href='contact.html'">Get in Touch</div>
+    </nav>
+    <div class="mob-foot">
+      <div class="mob-social">
+        <a href="https://www.facebook.com/ritche.sabinian" target="_blank" class="s-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/richsabinian/" target="_blank" class="s-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+      <span class="mob-copy">© 2026 Rich Sabinian</span>
+    </div>
+  </div>
+  <div class="mob-overlay" id="mobOverlay"></div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+<div class="about-wrap">
+  <div class="about-header-grid">
+
+    <!-- LEFT COLUMN: Header + Description stacked -->
+    <div class="about-left-col">
+      <div class="about-header">
+        <p class="eyebrow">The Designer</p>
+        <h2 class="about-headline">A vision born from<br><em>passion for fabric</em></h2>
+      </div>
+
+      <div class="about-text reveal rv1">
+        <p>Rich Sabinian is a renowned Kapampangan fashion designer based in Pampanga, Philippines, known for creating intricate gowns and tailored suits. As the CEO of RS Gowns and Suits Shop, he has designed for beauty queens, special events, and local celebrities.</p>
+        <p>His journey began far from the spotlight — as a factory worker. Through relentless hard work and consistency, he transitioned into professional fashion design in the early 2010s.</p>
+        <p>Behind his success is a story defined by the true realities of entrepreneurship — puyat, pagod, at sakripisyo.</p>
+        <div class="about-sig">Rich Sabinian</div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: Image -->
+    <div class="reveal rv2">
+      <div class="about-designer-container">
+        <div class="about-designer-img">
+          <img src="rich sabinian1.png" alt="Rich Sabinian Portrait">
+          <div class="about-img-overlay"><span>Rich Sabinian</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <!-- Video Section -->
+    <div class="video-section">
+      <div class="container">
+        <div class="video-header reveal">
+          <p class="eyebrow">Inside The Atelier</p>
+          <h2 class="sec-headline">Experience <em>RS Gowns &amp; Suits</em></h2>
+          <div class="video-desc">A journey from humble beginnings to a space of craft and design.</div>
+        </div>
+        <div class="video-wrapper reveal rv2">
+          <video class="shop-video" controls playsinline>
+            <source src="RS video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-main">
+      <div>
+        <div class="footer-logo">Rich <em>Sabinian</em></div>
+        <p class="footer-tagline">Dressing the discerning since 2015. Crafted in Pampanga, worn with pride.</p>
+      </div>
+      <div class="footer-quick">
+        <h4 class="footer-quick-title">Quick Access</h4>
+        <div class="footer-quick-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="collections.html">Collections</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-hours-block">
+        <h4 class="footer-hours-title">Store Hours</h4>
+        <p>Monday – Saturday: <span>8:00 AM – 5:00 PM</span></p>
+        <p>Sunday: <span>Closed</span></p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/ritche.sabinian" target="_blank" class="s-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/richsabinian/" target="_blank" class="s-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Rich Sabinian. All rights reserved.</p>
+      <div class="footer-links-row">
+        <a>Privacy Policy</a>
+        <a>Terms of Service</a>
+        <a>Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/collections-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
