@@ -119,24 +119,15 @@
       <div class="carousel-container reveal rv1">
         <div class="carousel-wrapper">
           <div class="carousel-track" id="carouselTrack">
-            <!-- Static images that will work -->
-            <div class="carousel-slide"><img src="Solohiya/hero.jpg" alt="Featured work" onerror="this.style.display='none'"></div>
-            <div class="carousel-slide"><img src="Solohiya/hero1.jpg" alt="Featured work" onerror="this.style.display='none'"></div>
-            <div class="carousel-slide"><img src="Solohiya/4.jpg" alt="Featured work" onerror="this.style.display='none'"></div>
-            <div class="carousel-slide"><img src="national-costumes/hero.jpg" alt="Featured work" onerror="this.style.display='none'"></div>
-            <div class="carousel-slide"><img src="PUSTURA/hero.jpg" alt="Featured work" onerror="this.style.display='none'"></div>
-            <div class="carousel-slide"><img src="Kids/hero.jpg" alt="Featured work" onerror="this.style.display='none'"></div>
-            <!-- Duplicate for seamless loop -->
-            <div class="carousel-slide"><img src="Solohiya/hero.jpg" alt="Featured work" onerror="this.style.display='none'"></div>
-            <div class="carousel-slide"><img src="Solohiya/hero1.jpg" alt="Featured work" onerror="this.style.display='none'"></div>
-            <div class="carousel-slide"><img src="Solohiya/4.jpg" alt="Featured work" onerror="this.style.display='none'"></div>
-            <div class="carousel-slide"><img src="national-costumes/hero.jpg" alt="Featured work" onerror="this.style.display='none'"></div>
-            <div class="carousel-slide"><img src="PUSTURA/hero.jpg" alt="Featured work" onerror="this.style.display='none'"></div>
-            <div class="carousel-slide"><img src="Kids/hero.jpg" alt="Featured work" onerror="this.style.display='none'"></div>
+            <div class="carousel-slide"><img src="Solohiya/hero.jpg" alt="Featured work"></div>
+            <div class="carousel-slide"><img src="Solohiya/hero1.jpg" alt="Featured work"></div>
+            <div class="carousel-slide"><img src="Solohiya/4.jpg" alt="Featured work"></div>
+            <div class="carousel-slide"><img src="national-costumes/hero.jpg" alt="Featured work"></div>
+            <div class="carousel-slide"><img src="PUSTURA/hero.jpg" alt="Featured work"></div>
+            <div class="carousel-slide"><img src="Kids/hero.jpg" alt="Featured work"></div>
           </div>
         </div>
       </div>
-    </section>
 
     <!-- SERVICES SECTION -->
     <section class="home-services">
@@ -210,63 +201,37 @@
   <script src="js/collections-data.js"></script>
   <script src="js/main.js"></script>
   
-  <!-- Simple carousel fix that runs after page loads -->
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
+<script>
+  window.addEventListener('load', function () {
     const track = document.getElementById('carouselTrack');
     if (!track) return;
 
-    // Wait for images to load so we get accurate widths
-    const images = Array.from(track.querySelectorAll('img'));
-    let loaded = 0;
-    const total = images.length;
+    // Clone all slides and append for infinite loop
+    const originals = Array.from(track.children);
+    originals.forEach(slide => {
+      track.appendChild(slide.cloneNode(true));
+    });
 
-    function startCarousel() {
-      // Remove CSS animation — we'll drive it with JS
-      track.style.animation = 'none';
+    const slideWidth = originals[0].offsetWidth + 20; // 20 = gap
+    const totalOrigWidth = originals.length * slideWidth;
 
-      const slides = Array.from(track.children);
-      const half = Math.floor(slides.length / 2);
+    let pos = 0;
+    let paused = false;
+    const speed = 0.6;
 
-      // Calculate the exact pixel width of one full set (half the track)
-      let halfWidth = 0;
-      const gap = 20; // must match your CSS gap
-      slides.slice(0, half).forEach(slide => {
-        halfWidth += slide.offsetWidth + gap;
-      });
+    track.parentElement.addEventListener('mouseenter', () => paused = true);
+    track.parentElement.addEventListener('mouseleave', () => paused = false);
 
-      let pos = 0;
-      const speed = 0.5; // px per frame — adjust for faster/slower
-      let paused = false;
-
-      track.parentElement.addEventListener('mouseenter', () => paused = true);
-      track.parentElement.addEventListener('mouseleave', () => paused = false);
-
-      function animate() {
-        if (!paused) {
-          pos += speed;
-          if (pos >= halfWidth) pos -= halfWidth; // seamless reset
-          track.style.transform = `translateX(-${pos}px)`;
-        }
-        requestAnimationFrame(animate);
+    function tick() {
+      if (!paused) {
+        pos += speed;
+        if (pos >= totalOrigWidth) pos = 0;
+        track.style.transform = 'translateX(-' + pos + 'px)';
       }
-
-      animate();
+      requestAnimationFrame(tick);
     }
 
-    if (total === 0) {
-      startCarousel();
-    } else {
-      images.forEach(img => {
-        if (img.complete) {
-          loaded++;
-          if (loaded === total) startCarousel();
-        } else {
-          img.addEventListener('load', () => { loaded++; if (loaded === total) startCarousel(); });
-          img.addEventListener('error', () => { loaded++; if (loaded === total) startCarousel(); });
-        }
-      });
-    }
+    tick();
   });
 </script>
 </body>
